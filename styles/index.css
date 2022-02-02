@@ -36,6 +36,12 @@ main {
   .side-bar {
     display: none;
   }
+  .search {
+    display: none;
+  }
+  .search input {
+    width: 25rem;
+  }
 }
 
 .left {
@@ -114,4 +120,68 @@ hr {
   height: 1px;
   background-color: #e5e5e5;
   border:none;
+}
+
+.content {
+  background-color: #f9f9f9;
+  width: 100%;
+  height: 100%;
+  padding:15px 15px;
+  border-top: 1px solid #ddd;
+  overflow-y: scroll; /* it means that you can see few videos at once */
+}
+
+.videos {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap; /* When the screen can only take four items, for example, other items will be moved to another row */
+}
+
+.video {
+  width: 270px;
+  margin-bottom: 30px;
+}
+
+.thumbnail {
+  width: 100%;
+  height: 170px;
+}
+
+.thumbnail img {
+  object-fit: cover; /* in this case is used to clip the image to its container so as to remove overflow (areas where the image is bigger than its container) */
+  height: 94%;
+  width: 100%;
+}
+
+.author img{
+  object-fit: cover;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  margin-right: 10px;
+}
+
+.details {
+  display: flex;
+}
+
+.title {
+  display: flex;
+
+  flex-direction: column;
+}
+
+.title h3 {
+  color: rgb(3, 3, 3,);
+  line-height: 18px;
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+.title a,
+span {
+  text-decoration: none;
+  color: rgb(96, 96, 96);
+  font-size: 12px;
 }
